@@ -1,67 +1,69 @@
-﻿
-<div class="jumbotron mt-5">
-  <h1 class="display-4">Add New Contact</h1>
-  <p class="lead">Add New Item to Contacts.</p>
-  <hr class="my-4">
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+﻿<div class="">
 
-    <div class="form-group">
+  <div class="jumbotron mt-5">
+    <h1 class="display-4">Add New Contact</h1>
+    <p class="lead">Add New Item to Contacts.</p>
+    <hr class="my-4">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
 
 
-      <input placeholder="Name" id="name" class="form-control"
-             formControlName="name" required>
+        <input placeholder="Name" id="name" class="form-control"
+               formControlName="name" required>
 
-      <div *ngIf="submitted && f.name.invalid"
-           class="alert alert-danger mt-2">
-        <span> <img src="assets/danger.png" alt=""></span>
-        <div *ngIf="f.name.errors.required">
-          <strong>Name</strong> is required.
+        <div *ngIf="submitted && f.name.invalid"
+             class="alert alert-danger mt-2">
+          <span> <img src="assets/danger.png" alt=""></span>
+          <div *ngIf="f.name.errors.required">
+            <strong>Name</strong> is required.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
+      <div class="form-group">
 
-      <input placeholder="E-Mail" id="email" class="form-control"
-             formControlName="email">
+        <input placeholder="E-Mail" id="email" class="form-control"
+               formControlName="email">
 
-      <div *ngIf="submitted && f.email.errors"
-           class="alert alert-danger mt-2">
-        <span> <img src="assets/danger.png" alt=""></span>
-        <div *ngIf="f.email.errors.required">
-          <strong>
-            Email
-          </strong> is required.
+        <div *ngIf="submitted && f.email.errors"
+             class="alert alert-danger mt-2">
+          <span> <img src="assets/danger.png" alt=""></span>
+          <div *ngIf="f.email.errors.required">
+            <strong>
+              Email
+            </strong> is required.
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="form-group">
+      <div class="form-group">
 
-      <input placeholder="Phone" id="phone" class="form-control"
-             formControlName="phone">
+        <input placeholder="Phone" id="phone" class="form-control"
+               formControlName="phone">
 
-      <div *ngIf="submitted && f.phone.errors"
-           class="alert alert-danger mt-2">
-        <span> <img src="assets/danger.png" alt=""></span>
-        <div *ngIf="f.phone.errors.required">
-          <strong>Phone</strong> is required.
+        <div *ngIf="submitted && f.phone.errors"
+             class="alert alert-danger mt-2">
+          <span> <img src="assets/danger.png" alt=""></span>
+          <div *ngIf="f.phone.errors.required">
+            <strong>Phone</strong> is required.
+          </div>
         </div>
       </div>
-    </div>
 
 
-    <div class="row-fluid text-right">
-      <button type="submit" class=" mr-3 btn btn-success">
-        <img src="assets/plus-button.png" alt=""> Submit
-      </button>
-      <button type="button" class="btn btn-danger"(click)="cancel()">
-        <img src="assets/cancel.png">
-        Cancel
-      </button>
-    </div>
-  </form>
+      <div class="row-fluid text-right">
+        <button type="submit" class=" mr-3 btn btn-success">
+          <img src="assets/plus-button.png" alt=""> Submit
+        </button>
+        <button type="button" class="btn btn-danger"(click)="cancel()">
+          <img src="assets/cancel.png">
+          Cancel
+        </button>
+      </div>
+    </form>
 
+  </div>
 </div>
 
 
