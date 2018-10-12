@@ -20,7 +20,7 @@ export class ContactService {
 
     deleteContact(_contact: Contact): Observable<Contact[]> {
         this.contacts = this.contacts.filter(contact => contact !== _contact);
-        return of(this.contacts).pipe(delay(1000));
+        return of(this.contacts).pipe(delay(500));
     }
 
     addContact(_contact: Contact): Observable<Contact> {
